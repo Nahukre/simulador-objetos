@@ -27,7 +27,7 @@ let extra = parseInt(prompt("Si tiene algún ingreso extra destinado a ahorros e
 let objetivo = prompt("Qué bien desea alcanzar con sus ahorros?");
 let valorBien = parseInt(prompt("Cuál es el valor del bien que desea alcanzar con sus ahorros?"));
 
-
+const calculoDeInversion = () => {
 let ahorroPorcentaje = porciento(multiplicacion(sueldo, ahorro));
 let ahorroAnual = suma((multiplicacion(ahorro, 12)), extra);
 let mesesDeAhorro = division(valorBien, sueldo);
@@ -36,6 +36,8 @@ let sueldoAños = division(mesesDeAhorro, 12);
 let ahorroAños = division(ahorroReal, 12);
 let tiempoTotal = division(valorBien, ahorroAnual);
 let tiempoPlus = division(valorBien, multiplicacion(ahorroAnual, 1.1));
+}
+calculoDeInversion();
 
 const persona1 = new persona(nombre, mail, sueldo, ahorro, extra, objetivo, valorBien);
 console.log(persona1.toString());
