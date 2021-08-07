@@ -24,6 +24,7 @@ let valorBien = parseInt(prompt("Cuál es el valor del bien que desea alcanzar c
 const nuevaPersona = () => {
     const persona1 = new persona(nombre, mail, sueldo, ahorro, extra, objetivo, valorBien);
     console.log(persona1.toString());
+    alert("Bienvenido " + persona1.nombre);
 }
 nuevaPersona();
 
